@@ -2,7 +2,6 @@ from tkinter import filedialog
 import tkinter.font as font
 from tkinter import *
 from packages.deletecopies import *
-from style import *
 
 def browse_button():
     # Allow user to select a directory and store it in global var
@@ -21,6 +20,19 @@ root.configure(bg="#303444")
 root.iconphoto(False, PhotoImage(file='assets/icon/logo.png'))
 
 folder_path = StringVar(value="Please select a folder")
+
+
+# Styling
+titleFont = font.Font(size=18, weight=font.BOLD)
+showLabelFont = font.Font(family="Helvetica")
+browseButtonFont = font.Font(family="Arial", size=10, weight=font.BOLD)
+deleteButtonFont = font.Font(family="Arial", size=12, weight=font.BOLD)
+
+primary = "#303444"
+secondary = "#3E4458"
+white = "#fff"
+
+middle = 0.5
 
 
 titleLabel = Label(master=root, text="Duplicates Deleter", bg=primary, fg=white,anchor='w', height=2)
