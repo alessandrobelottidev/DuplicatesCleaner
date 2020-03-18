@@ -1,4 +1,4 @@
-# Duplicates Deleter (DD)
+# Duplicates Cleaner (DD)
 
 Duplicates Deleter (DD) is a GUI of a package that deletes all the duplicated files in a directory (including subdirectories)
 <p align="center">
