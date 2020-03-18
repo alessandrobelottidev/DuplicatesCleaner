@@ -1,6 +1,7 @@
 # Duplicates Deleter (DD)
 
 Duplicates Deleter (DD) is a GUI of a package that deletes all the duplicated files in a directory (including subdirectories)
+![A preview screenshot of the software](http://tiny.cc/gv1ilz)
 
 ## Installation
 
