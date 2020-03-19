@@ -9,7 +9,6 @@ def browse_button():
     filename = filedialog.askdirectory()
     folder_path.set(filename)
     finished_statement.set("Click the button to start cleaning")
-    print(filename)
 
 
 root = Tk()
