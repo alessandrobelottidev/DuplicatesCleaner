@@ -25,7 +25,11 @@ def get_hash(filename, first_chunk_only=False, hash_algo=hashlib.sha1):
     return hashobj.digest()
 
 
-def check_for_duplicates(paths):
+def check_for_duplicates(paths, statement):
+
+    statement.set('🏁 Started cleaning')
+    removed = 0
+
     files_by_size = defaultdict(list)
     files_by_small_hash = defaultdict(list)
     files_by_full_hash = dict()
@@ -77,5 +81,8 @@ def check_for_duplicates(paths):
                       (filename, duplicate))
                 filename = filename.replace('\\\\','\\')
                 os.remove(filename)
+                removed +=1
             else:
                 files_by_full_hash[full_hash] = filename
+
+    statement.set("✅ Finished cleaning - "+ str(removed) + " files removed")
