@@ -3,6 +3,7 @@ import os
 import sys
 import hashlib
 from collections import defaultdict
+import time
 
 
 def chunk_reader(fobj, chunk_size=1024):
@@ -27,7 +28,7 @@ def get_hash(filename, first_chunk_only=False, hash_algo=hashlib.sha1):
 
 def check_for_duplicates(paths, statement):
 
-    statement.set('🏁 Started cleaning')
+    start_time = time.time()
     removed = 0
 
     files_by_size = defaultdict(list)
@@ -85,4 +86,4 @@ def check_for_duplicates(paths, statement):
             else:
                 files_by_full_hash[full_hash] = filename
 
-    statement.set("✅ Finished cleaning - "+ str(removed) + " files removed")
+    statement.set("✅ Finished cleaning - "+ str(removed) + " files removed in "+ str(round(time.time() - start_time, 4)) + " seconds")
