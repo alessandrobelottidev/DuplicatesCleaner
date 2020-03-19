@@ -7,7 +7,8 @@ def browse_button():
     # Allow user to select a directory and store it in global var
     # called folder_path
     filename = filedialog.askdirectory()
-    folder_path.set(filename)
+    if filename != "":
+        folder_path.set(filename)
     finished_statement.set("Click the button to start cleaning")
 
 
