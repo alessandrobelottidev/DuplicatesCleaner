@@ -49,7 +49,7 @@ selectButton = Button(text="SELECT", command=browse_button, bg=primary, fg=white
 selectButton.place(relx=0.86, rely=0.45, anchor=CENTER)
 selectButton['font'] = browseButtonFont
 
-deleteButton = Button(text="DELETE", command=lambda:check_for_duplicates([folder_path.get()], finished_statement), bg=white, fg=primary, height=2, width=12)
+deleteButton = Button(text="CLEAN", command=lambda:check_for_duplicates([folder_path.get()], finished_statement), bg=white, fg=primary, height=2, width=12)
 deleteButton.place(relx=middle, rely=0.76, anchor=CENTER)
 deleteButton['font'] = deleteButtonFont
 
